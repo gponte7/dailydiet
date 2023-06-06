@@ -1,15 +1,22 @@
-import { Button } from "@components/Button";
-import { Container, Header, Logo, MealsTitleContainer, MealsTitle, StatsContainer, StatsSubtitle, StatsTitle, StatsIcon, MealsDateTitle } from "./styles";
-import LogoImg from '@assets/logo.png'
-import { MealCard } from "@components/MealCard";
-import { useNavigation, useFocusEffect } from "@react-navigation/native";
-import { TouchableOpacity, FlatList } from 'react-native'
-import { mealsGetAll } from "@storage/meal/mealsGetAll";
 import { useState, useCallback } from "react";
-import { ListEmpty } from "@components/ListEmpty";
+import { TouchableOpacity, FlatList } from 'react-native'
+
+import { useNavigation, useFocusEffect } from "@react-navigation/native";
+
+import { mealsGetAll } from "@storage/meal/mealsGetAll";
 import { MealStorageDTO } from "@storage/meal/mealStorageDTO";
-import { dateFormatter } from "@utils/dateFormatter";
+
+import { Container, Header, Logo, MealsTitleContainer, MealsTitle, StatsContainer, StatsSubtitle, StatsTitle, StatsIcon, MealsDateTitle } from "./styles";
+
+import { Button } from "@components/Button";
+import { MealCard } from "@components/MealCard";
+import { ListEmpty } from "@components/ListEmpty";
+
 import { MealSubtitle } from "@screens/Meal/styles";
+
+import LogoImg from '@assets/logo.png'
+
+import { dateFormatter } from "@utils/dateFormatter";
 
 export function Home() {
   const [meals, setMeals] = useState<MealStorageDTO[]>([])
