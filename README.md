@@ -1,2 +1,1 @@
-# dailydiet
-App para controle dietético das refeições diárias!
+:construction:<h1>ReadMe in construction</h1>:construction:
